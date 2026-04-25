@@ -1,0 +1,56 @@
+@model IEnumerable<Parcial_Vilchez_Cristopher.Models.Curso>
+
+<div class="container mt-4">
+    <h2 class="mb-4"><i class="bi bi-gear-fill me-2"></i>Panel de Coordinador</h2>
+    
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    <a asp-action="CrearCurso" class="btn btn-primary mb-3">
+        <i class="bi bi-plus-lg"></i> Crear Nuevo Curso
+    </a>
+
+    <table class="table table-bordered table-hover shadow-sm bg-white">
+        <thead class="table-dark">
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Cupos</th>
+                <th>Horario</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var curso in Model)
+            {
+                <tr>
+                    <td>@curso.Codigo</td>
+                    <td>@curso.Nombre</td>
+                    <td>@curso.CupoMaximo</td>
+                    <td>@curso.HorarioInicio.ToString(@"hh\:mm") - @curso.HorarioFin.ToString(@"hh\:mm")</td>
+                    <td>
+                        <span class="badge @(curso.Activo ? "bg-success" : "bg-danger")">
+                            @(curso.Activo ? "Activo" : "Inactivo")
+                        </span>
+                    </td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <a asp-action="Matriculas" asp-route-id="@curso.Id" class="btn btn-sm btn-info text-white">
+                                <i class="bi bi-people-fill"></i> Matrículas
+                            </a>
+                            <form asp-action="CambiarEstadoCurso" method="post">
+                                <input type="hidden" name="id" value="@curso.Id" />
+                                <button type="submit" class="btn btn-sm @(curso.Activo ? "btn-outline-danger" : "btn-outline-success")">
+                                    @(curso.Activo ? "Desactivar" : "Activar")
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,38 @@
+@model Parcial_Vilchez_Cristopher.Models.Curso
+
+<div class="container mt-4">
+    <h2>Crear Curso</h2>
+    <div class="card shadow-sm p-4 mt-3">
+        <form asp-action="CrearCurso" method="post">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Código</label>
+                    <input asp-for="Codigo" class="form-control" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Nombre del Curso</label>
+                    <input asp-for="Nombre" class="form-control" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Créditos</label>
+                    <input asp-for="Creditos" type="number" min="1" class="form-control" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Cupo Máximo</label>
+                    <input asp-for="CupoMaximo" type="number" min="1" class="form-control" required />
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label>Hora Inicio</label>
+                    <input asp-for="HorarioInicio" type="time" class="form-control" required />
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label>Hora Fin</label>
+                    <input asp-for="HorarioFin" type="time" class="form-control" required />
+                </div>
+            </div>
+            <input type="hidden" asp-for="Activo" value="true" />
+            <button type="submit" class="btn btn-success">Guardar Curso</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
