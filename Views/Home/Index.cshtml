@@ -1,8 +1,55 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row align-items-center py-5">
+    <div class="col-lg-6">
+        <h1 class="display-4 fw-bold text-dark mb-3">Bienvenido a tu <span class="text-primary">Futuro Académico</span></h1>
+        <p class="lead text-muted mb-4">Gestiona tus cursos, revisa tus horarios y matricúlate de forma rápida y sencilla desde nuestro portal oficial.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a asp-controller="Curso" asp-action="Index" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow">
+                <i class="bi bi-search me-2"></i>Explorar Cursos
+            </a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-outline-secondary btn-lg px-4 fw-bold">
+                    Iniciar Sesión
+                </a>
+            }
+        </div>
+    </div>
+    <div class="col-lg-6 d-none d-lg-block text-center">
+        <i class="bi bi-laptop text-primary" style="font-size: 15rem; opacity: 0.1; position: absolute;"></i>
+        <img src="https://img.freepik.com/free-vector/online-learning-concept-illustration_114360-4960.jpg" class="img-fluid rounded shadow-sm" alt="Educación" style="max-height: 400px;">
+    </div>
+</div>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+        <div class="icon-square bg-white text-primary shadow-sm rounded-3 flex-shrink-0 me-3 p-3">
+            <i class="bi bi-shield-check fs-2"></i>
+        </div>
+        <div>
+            <h4 class="fw-bold">Matrícula Segura</h4>
+            <p>Validamos cupos y horarios en tiempo real para evitar conflictos en tu semestre.</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div class="icon-square bg-white text-primary shadow-sm rounded-3 flex-shrink-0 me-3 p-3">
+            <i class="bi bi-lightning-charge fs-2"></i>
+        </div>
+        <div>
+            <h4 class="fw-bold">Gestión Rápida</h4>
+            <p>Accede a tus cursos y descarga tus sílabos con solo un par de clics.</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div class="icon-square bg-white text-primary shadow-sm rounded-3 flex-shrink-0 me-3 p-3">
+            <i class="bi bi-people fs-2"></i>
+        </div>
+        <div>
+            <h4 class="fw-bold">Soporte 24/7</h4>
+            <p>Nuestro equipo de coordinación está disponible para resolver tus dudas académicas.</p>
+        </div>
+    </div>
 </div>
