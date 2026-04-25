@@ -394,3 +394,12 @@ C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\Parc
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\Parcial_Vilchez_Cristopher.genruntimeconfig.cache
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\ref\Parcial_Vilchez_Cristopher.dll
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\t8zfftd88l-r9vmvxgjmu.gz
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\StackExchange.Redis.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll

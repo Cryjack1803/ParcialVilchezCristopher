@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -13,6 +16,8 @@
         .nav-link { color: rgba(255,255,255,.8) !important; font-weight: 500; }
         .nav-link:hover { color: #fff !important; }
         .btn-auth { border-radius: 20px; padding: 0.5rem 1.5rem; }
+        /* Estilo extra para el botón de retorno */
+        .nav-return { background: rgba(255,255,255,0.1); border-radius: 10px; margin-left: 10px; }
     </style>
 </head>
 <body class="bg-light">
@@ -35,6 +40,21 @@
                                 <i class="bi bi-book me-1"></i>Catálogo de Cursos
                             </a>
                         </li>
+
+                        @* LÓGICA DE SESIÓN REDIS (Pregunta 4) *@
+                        @{
+                            var lastCourse = HttpContextAccessor.HttpContext?.Session.GetString("LastCourseName");
+                            var lastId = HttpContextAccessor.HttpContext?.Session.GetInt32("LastCourseId");
+                        }
+
+                        @if (!string.IsNullOrEmpty(lastCourse))
+                        {
+                            <li class="nav-item nav-return">
+                                <a class="nav-link text-info" asp-controller="Curso" asp-action="Details" asp-route-id="@lastId">
+                                    <i class="bi bi-arrow-left-circle me-1"></i>Volver a: <strong>@lastCourse</strong>
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
