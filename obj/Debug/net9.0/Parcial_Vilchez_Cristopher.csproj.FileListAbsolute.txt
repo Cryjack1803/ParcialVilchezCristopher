@@ -320,7 +320,6 @@ C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\comp
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\t8zfftd88l-b9sayid5wm.gz
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\ozo0rjon75-61n19gt1b8.gz
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\hmca0q3r58-xtxxf3hu2r.gz
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\ek431ctx1x-bqjiyaj88i.gz
@@ -394,3 +393,4 @@ C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\refi
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\Parcial_Vilchez_Cristopher.pdb
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\Parcial_Vilchez_Cristopher.genruntimeconfig.cache
 C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\ref\Parcial_Vilchez_Cristopher.dll
+C:\Users\rs_va\OneDrive\Desktop\Parcial_Vilchez_Cristopher\obj\Debug\net9.0\compressed\t8zfftd88l-r9vmvxgjmu.gz
