@@ -41,6 +41,16 @@
                             </a>
                         </li>
 
+                        @* PREGUNTA 5: ENLACE SOLO PARA COORDINADORES *@
+                        @if (User.IsInRole("Coordinador"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-success" asp-controller="Coordinador" asp-action="Index">
+                                    <i class="bi bi-shield-lock-fill me-1"></i>Panel Coordinador
+                                </a>
+                            </li>
+                        }
+
                         @* LÓGICA DE SESIÓN REDIS (Pregunta 4) *@
                         @{
                             var lastCourse = HttpContextAccessor.HttpContext?.Session.GetString("LastCourseName");
