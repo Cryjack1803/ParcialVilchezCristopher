@@ -1,0 +1,53 @@
+@model IEnumerable<Parcial_Vilchez_Cristopher.Models.Curso>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Catálogo de Cursos</h2>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-5 bg-white">
+        <div class="card-body p-4">
+            <form method="get" class="row g-3">
+                <div class="col-md-5">
+                    <label class="form-label fw-bold">Buscar Curso</label>
+                    <input type="text" name="buscar" class="form-control shadow-sm" placeholder="Nombre o código del curso..." value="@Context.Request.Query["buscar"]">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label fw-bold">Créditos Mín.</label>
+                    <input type="number" name="minCred" class="form-control shadow-sm" placeholder="0" value="@Context.Request.Query["minCred"]">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label fw-bold">Créditos Máx.</label>
+                    <input type="number" name="maxCred" class="form-control shadow-sm" placeholder="10" value="@Context.Request.Query["maxCred"]">
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100 fw-bold shadow-sm py-2">
+                        <i class="bi bi-filter me-1"></i> Aplicar Filtros
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model) {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 border-top border-primary border-4 curso-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-soft-primary text-primary px-3">@item.Codigo</span>
+                            <span class="text-muted small"><i class="bi bi-clock me-1"></i>@item.HorarioInicio.ToString(@"hh\:mm")</span>
+                        </div>
+                        <h5 class="card-title fw-bold text-dark">@item.Nombre</h5>
+                        <p class="card-text text-muted">Este curso otorga un total de <strong>@item.Creditos</strong> créditos académicos.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary w-100 fw-bold">
+                            Ver Detalles <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Parcial_Vilchez_Cristopher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c23135fc45b08b4b1bd6f3d0116394d31f4954ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6769fe42481ffc539386c68700f05fe956a63247")]
 [assembly: System.Reflection.AssemblyProductAttribute("Parcial_Vilchez_Cristopher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Parcial_Vilchez_Cristopher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
